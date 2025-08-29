@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "totalProblems": 1,
+    "lastUpdated": "2025-08-29T15:34:11.159Z",
+    "breakdown": {
+      "Codechef": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      },
+      "Gfg": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      },
+      "Leetcode": {
+        "total": 1,
+        "Easy": 0,
+        "Medium": 1,
+        "Hard": 0
+      },
+      "Hackerrank": {
+        "total": 0,
+        "Easy": 0,
+        "Medium": 0,
+        "Hard": 0
+      }
+    }
+  },
+  "problems": [
+    {
+      "id": "leetcode-medium-longest-substring-without-repeating-characters",
+      "platform": "Leetcode",
+      "difficulty": "Medium",
+      "problemName": "Longest Substring Without Repeating Characters",
+      "language": "java",
+      "files": {
+        "code": "class Solution {\n    public int lengthOfLongestSubstring(String s) {\n        HashMap<Character, Integer> hashMap = new HashMap<>();\n        int res = 0;\n        int wstart = 0;\n\n        for (int wend = 0; wend < s.length(); wend++) {\n            if (hashMap.containsKey(s.charAt(wend)) && wstart < hashMap.get(s.charAt(wend))){\n                wstart = hashMap.get(s.charAt(wend));\n            }\n            hashMap.put(s.charAt(wend), wend+1);\n            res = Math.max(res, wend-wstart+1);\n\n        }\n        return res;\n    }\n}",
+        "readme": "HashTableStringSlidingWindow\n\nGiven a string s, find the length of the longest substring without duplicate characters.\n\n \nExample 1:\n\nInput: s = \"abcabcbb\"\nOutput: 3\nExplanation: The answer is \"abc\", with the length of 3.\n\n\nExample 2:\n\nInput: s = \"bbbbb\"\nOutput: 1\nExplanation: The answer is \"b\", with the length of 1.\n\n\nExample 3:\n\nInput: s = \"pwwkew\"\nOutput: 3\nExplanation: The answer is \"wke\", with the length of 3.\nNotice that the answer must be a substring, \"pwke\" is a subsequence and not a substring.\n\n\n \nConstraints:\n\n\n\t0 <= s.length <= 5 * 104\n\ts consists of English letters, digits, symbols and spaces.",
+        "notes": "Longest Substring Without Repeating Characters\n\n          - Summary: This Java code employs a HashMap to store characters as keys and their indices as values.  It iterates through the input string, using a sliding window approach.  If a repeating character is found within the current window, the window's start index is updated.  The algorithm maintains the maximum length of the substring without repeating characters, returning this length as the result.\n\n          - Time Complexity: O(n) because the code iterates through the string once. While the HashMap operations have average time complexity O(1), in the worst case they could be O(n), but this is very unlikely with a large dataset.  Hence, the overall time complexity remains linear.\n          - Space Complexity: O(min(m, n)) where n is the length of the string and m is the size of the character set. In the worst-case scenario, the HashMap could store all unique characters from the string, resulting in a space complexity proportional to the number of unique characters."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-29T15:34:11.158Z"
+    }
+  ]
+}
