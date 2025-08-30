@@ -1,7 +1,7 @@
 {
   "metadata": {
     "totalProblems": 6,
-    "lastUpdated": "2025-08-30T15:35:01.324Z",
+    "lastUpdated": "2025-08-30T15:37:15.456Z",
     "breakdown": {
       "Codechef": {
         "total": 1,
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.289Z"
+      "lastUpdated": "2025-08-30T15:37:15.335Z"
     },
     {
       "id": "gfg-easy-first-repeating-element",
@@ -60,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.292Z"
+      "lastUpdated": "2025-08-30T15:37:15.338Z"
     },
     {
       "id": "gfg-easy-reverse-an-array",
@@ -76,7 +76,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.293Z"
+      "lastUpdated": "2025-08-30T15:37:15.340Z"
     },
     {
       "id": "hackerrank-medium-simple-array-sum",
@@ -87,12 +87,12 @@
       "files": {
         "code": "import java.io.*;\nimport java.math.*;\nimport java.security.*;\nimport java.text.*;\nimport java.util.*;\nimport java.util.concurrent.*;\nimport java.util.function.*;\nimport java.util.regex.*;\nimport java.util.stream.*;\nimport static java.util.stream.Collectors.joining;\nimport static java.util.stream.Collectors.toList;\n\nclass Result {\n\n    /*\n     * Complete the 'simpleArraySum' function below.\n     *\n     * The function is expected to return an INTEGER.\n     * The function accepts INTEGER_ARRAY ar as parameter.\n     */\n\n    public static int simpleArraySum(List<Integer> ar) {\n    // Write your code here\n      int sum =0;\n        for(int num : ar){\n            sum +=num;\n        }  \n        return sum;\n\n    }\n\n}\n\npublic class Solution {\n    public static void main(String[] args) throws IOException {\n        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));\n        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(System.getenv(\"OUTPUT_PATH\")));\n\n        int arCount = Integer.parseInt(bufferedReader.readLine().trim());\n\n        List<Integer> ar = Stream.of(bufferedReader.readLine().replaceAll(\"\\\\s+$\", \"\").split(\" \"))\n            .map(Integer::parseInt)\n            .collect(toList());\n\n        int result = Result.simpleArraySum(ar);\n\n        bufferedWriter.write(String.valueOf(result));\n        bufferedWriter.newLine();\n\n        bufferedReader.close();\n        bufferedWriter.close();\n    }\n}",
         "readme": "null\n\nGiven an array of integers, find the sum of its elements.\n\nFor example, if the array , , so return .\n\nFunction Description\n\nComplete the  function with the following parameter(s):\n\n: an array of integers\n\nReturns\n\n: the sum of the array elements\n\nInput Format\n\nThe first line contains an integer, , denoting the size of the array.\nThe second line contains  space-separated integers representing the array's elements.\n\nConstraints\n\nSample Input\n\nSTDIN           Function\n-----           --------\n6               ar[] size n = 6\n1 2 3 4 10 11   ar = [1, 2, 3, 4, 10, 11]\n\n\nSample Output\n\n31\n\n\nExplanation\n\nPrint the sum of the array's elements: .",
-        "notes": "Simple Array Sum\n\n          - Summary: The code uses a List (dynamic array) to store the input integers.  It iterates through this List, summing each element to calculate the total sum. The sum is then returned. The main function handles input/output, reading the array size and elements from the standard input and writing the result to the standard output.\n\n          - Time Complexity: O(n), where n is the number of elements in the input array. This is because the code iterates through the array once to calculate the sum.\n          - Space Complexity: O(n), where n is the number of elements in the input array. This is due to the space used to store the input array in memory.  The space used for the sum variable is constant."
+        "notes": "Simple Array Sum\n\n          - Summary: The code uses a List to store integers. It first reads the number of elements in the array from standard input, then reads the array elements.  The `simpleArraySum` function iterates through the List, summing each element. Finally, the sum is written to standard output.\n\n          - Time Complexity: O(n), where n is the number of elements in the input array. This is because the `simpleArraySum` function iterates through the array once to calculate the sum.\n          - Space Complexity: O(n), where n is the number of elements in the input array. This is because the List `ar` stores all the input elements."
       },
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.300Z"
+      "lastUpdated": "2025-08-30T15:37:15.347Z"
     },
     {
       "id": "leetcode-easy-palindrome-number",
@@ -108,7 +108,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.296Z"
+      "lastUpdated": "2025-08-30T15:37:15.342Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -124,7 +124,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:35:01.298Z"
+      "lastUpdated": "2025-08-30T15:37:15.344Z"
     }
   ]
 }
