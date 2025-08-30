@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 4,
-    "lastUpdated": "2025-08-30T15:31:14.228Z",
+    "totalProblems": 5,
+    "lastUpdated": "2025-08-30T15:33:12.229Z",
     "breakdown": {
       "Codechef": {
         "total": 1,
@@ -16,8 +16,8 @@
         "Hard": 0
       },
       "Leetcode": {
-        "total": 1,
-        "Easy": 0,
+        "total": 2,
+        "Easy": 1,
         "Medium": 1,
         "Hard": 0
       },
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:31:14.084Z"
+      "lastUpdated": "2025-08-30T15:33:12.065Z"
     },
     {
       "id": "gfg-easy-first-repeating-element",
@@ -60,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:31:14.087Z"
+      "lastUpdated": "2025-08-30T15:33:12.068Z"
     },
     {
       "id": "hackerrank-medium-simple-array-sum",
@@ -76,7 +76,23 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:31:14.093Z"
+      "lastUpdated": "2025-08-30T15:33:12.075Z"
+    },
+    {
+      "id": "leetcode-easy-palindrome-number",
+      "platform": "Leetcode",
+      "difficulty": "Easy",
+      "problemName": "Palindrome Number",
+      "language": "java",
+      "files": {
+        "code": "class Solution {\n    public boolean isPalindrome(int x) {\n        int n = 0;\n        int orig = x;\n        if(x==0)\n        {\n            return true;\n        }\n        if (x < 0) {\n            return false;\n        }\n        while (x != 0) {\n            int rem = x % 10;\n            n = n * 10 + rem;\n            x = x / 10;\n        }\n        if (orig == n) {\n            return true;\n        } else {\n            return false;\n        }\n    }\n}",
+        "readme": "Math\n\nGiven an integer x, return true if x is a palindrome, and false otherwise.\n\n \nExample 1:\n\nInput: x = 121\nOutput: true\nExplanation: 121 reads as 121 from left to right and from right to left.\n\n\nExample 2:\n\nInput: x = -121\nOutput: false\nExplanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.\n\n\nExample 3:\n\nInput: x = 10\nOutput: false\nExplanation: Reads 01 from right to left. Therefore it is not a palindrome.\n\n\n \nConstraints:\n\n\n\t-231 <= x <= 231 - 1\n\n\n \nFollow up: Could you solve it without converting the integer to a string?",
+        "notes": "Palindrome Number\n\n          - Summary: The code uses integer variables to check if a given integer is a palindrome. It first handles the base cases of 0 and negative numbers.  Then, it iteratively reverses the input integer by extracting the last digit and prepending it to a new integer. Finally, it compares the original and reversed integers to determine if it's a palindrome.\n\n          - Time Complexity: O(log10(x)) because the while loop iterates roughly log10(x) times, where x is the input integer.  The number of digits in x determines the number of iterations.\n          - Space Complexity: O(1) because the algorithm uses a constant amount of extra space regardless of the input size. Only a few integer variables are used."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-30T15:33:12.070Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -92,7 +108,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:31:14.090Z"
+      "lastUpdated": "2025-08-30T15:33:12.073Z"
     }
   ]
 }
