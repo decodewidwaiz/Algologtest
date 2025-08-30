@@ -1,11 +1,11 @@
 {
   "metadata": {
-    "totalProblems": 3,
-    "lastUpdated": "2025-08-29T15:47:31.469Z",
+    "totalProblems": 4,
+    "lastUpdated": "2025-08-30T15:31:14.228Z",
     "breakdown": {
       "Codechef": {
-        "total": 0,
-        "Easy": 0,
+        "total": 1,
+        "Easy": 1,
         "Medium": 0,
         "Hard": 0
       },
@@ -31,6 +31,22 @@
   },
   "problems": [
     {
+      "id": "codechef-easy-cost-of-groceries",
+      "platform": "Codechef",
+      "difficulty": "Easy",
+      "problemName": "Cost of Groceries",
+      "language": "java",
+      "files": {
+        "code": "import java.util.Scanner;\n\npublic class Main {\n    public static void main(String[] args) {\n        Scanner scanner = new Scanner(System.in);\n        int t = scanner.nextInt();\n\n        while (t-- > 0) {\n            int n = scanner.nextInt();\n            int x = scanner.nextInt();\n            int[] a = new int[n];\n            int[] b = new int[n];\n            \n            for (int i = 0; i < n; i++) {\n                a[i] = scanner.nextInt();\n            }\n            \n            for (int j = 0; j < n; j++) {\n                b[j] = scanner.nextInt();\n            }\n            int ans = 0;\n            for (int i = 0; i < n; i++) {\n                if (a[i] >= x) {\n                    ans += b[i];\n                }\n            }\n            \n            System.out.println(ans);\n        }\n        \n        scanner.close();\n    }\n}",
+        "readme": "arrays\n\nCost of Groceries\n\nChef visited a grocery store for fresh supplies. There are \n𝑁\nN items in the store where the \n𝑖\n𝑡\nℎ\ni\nth\n item has a freshness value \n𝐴\n𝑖\nA\ni\n\t​\n\n and cost \n𝐵\n𝑖\nB\ni\n\t​\n\n.\n\nChef has decided to purchase all the items having a freshness value greater than equal to \n𝑋\nX. Find the total cost of the groceries Chef buys.\n\nInput Format\nThe first line of input will contain a single integer \n𝑇\nT, denoting the number of test cases.\nEach test case consists of multiple lines of input.\nThe first line of each test case contains two space-separated integers \n𝑁\nN and \n𝑋\nX — the number of items and the minimum freshness value an item should have.\nThe second line contains \n𝑁\nN space-separated integers, the array \n𝐴\nA, denoting the freshness value of each item.\nThe third line contains \n𝑁\nN space-separated integers, the array \n𝐵\nB, denoting the cost of each item.\nOutput Format\n\nFor each test case, output on a new line, the total cost of the groceries Chef buys.\n\nConstraints\n1\n≤\n𝑇\n≤\n100\n1≤T≤100\n1\n≤\n𝑁\n,\n𝑋\n≤\n100\n1≤N,X≤100\n1\n≤\n𝐴\n𝑖\n,\n𝐵\n𝑖\n≤\n100\n1≤A\ni\n\t​\n\n,B\ni\n\t​\n\n≤100\nSample 1:\nInput\nOutput\n4\n2 20\n15 67\n10 90\n3 1\n1 2 3\n1 2 3\n3 100\n10 90 50\n30 7 93\n4 50\n12 78 50 40\n40 30 20 10\n\n90\n6\n0\n50\n\nExplanation:\n\nTest case \n1\n1: Item \n2\n2 has freshness value greater than equal to \n𝑋\n=\n20\nX=20. Thus, Chef buys item \n2\n2. The total cost is \n90\n90.\n\nTest case \n2\n2: Items \n1\n,\n2\n,\n1,2, and \n3\n3 have freshness value greater than equal to \n𝑋\n=\n1\nX=1. Thus, Chef buys all \n3\n3 items. The total cost is \n1\n+\n2\n+\n3\n=\n6\n1+2+3=6.\n\nTest case \n3\n3: No item has freshness value greater than equal to \n𝑋\n=\n100\nX=100. Thus, Chef buys no items.\n\nTest case \n4\n4: Items \n2\n2 and \n3\n3 have freshness value greater than equal to \n𝑋\n=\n50\nX=50. Thus, Chef buys items \n2\n2 and \n3\n3. The total cost is \n30\n+\n20\n=\n50\n30+20=50.",
+        "notes": "Conditional Summation\n\n          - Summary: The Java code utilizes two integer arrays, 'a' and 'b', of size 'n'. It reads 't' test cases, each consisting of 'n', 'x', array 'a', and array 'b' as input.  The code iterates through array 'a', and if an element is greater than or equal to 'x', the corresponding element from array 'b' is added to a running sum 'ans'. Finally, 'ans' is printed for each test case.  The Scanner class is used for input.\n\n          - Time Complexity: O(n*t), where 't' is the number of test cases and 'n' is the size of the arrays. This is because the code iterates through the arrays once for each test case.\n          - Space Complexity: O(n), dominated by the space used to store the arrays 'a' and 'b'. The space used for other variables is constant."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-30T15:31:14.084Z"
+    },
+    {
       "id": "gfg-easy-first-repeating-element",
       "platform": "Gfg",
       "difficulty": "Easy",
@@ -44,7 +60,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T15:47:31.444Z"
+      "lastUpdated": "2025-08-30T15:31:14.087Z"
     },
     {
       "id": "hackerrank-medium-simple-array-sum",
@@ -60,7 +76,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T15:47:31.450Z"
+      "lastUpdated": "2025-08-30T15:31:14.093Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -76,7 +92,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-29T15:47:31.447Z"
+      "lastUpdated": "2025-08-30T15:31:14.090Z"
     }
   ]
 }
