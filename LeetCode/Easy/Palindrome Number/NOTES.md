@@ -1,8 +1,8 @@
 
           Palindrome Number
 
-          - Summary: The code uses integer variables to check if a given integer is a palindrome. It first handles the base cases of 0 and negative numbers.  Then, it iteratively reverses the input integer by extracting the last digit and prepending it to a new integer. Finally, it compares the original and reversed integers to determine if it's a palindrome.
+          - Summary: The Java code uses integer variables to check if a given integer 'x' is a palindrome. It reverses the integer 'x' digit by digit using a while loop and modulo operator.  Then, it compares the reversed integer with the original integer.  If they are equal, it returns true; otherwise, it returns false. No additional data structures like arrays or hashmaps are used.
 
-          - Time Complexity: O(log10(x)) because the while loop iterates roughly log10(x) times, where x is the input integer.  The number of digits in x determines the number of iterations.
-          - Space Complexity: O(1) because the algorithm uses a constant amount of extra space regardless of the input size. Only a few integer variables are used.
+          - Time Complexity: O(log10(x)). The while loop iterates through the digits of the number. The number of digits is proportional to the logarithm base 10 of the number. Therefore, the time complexity is logarithmic with respect to the input number.
+          - Space Complexity: O(1). The algorithm uses a fixed number of integer variables regardless of the input size.  Therefore, the space complexity is constant.
           
