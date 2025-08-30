@@ -1,7 +1,7 @@
 {
   "metadata": {
-    "totalProblems": 5,
-    "lastUpdated": "2025-08-30T15:33:30.305Z",
+    "totalProblems": 6,
+    "lastUpdated": "2025-08-30T15:35:01.324Z",
     "breakdown": {
       "Codechef": {
         "total": 1,
@@ -10,8 +10,8 @@
         "Hard": 0
       },
       "Gfg": {
-        "total": 1,
-        "Easy": 1,
+        "total": 2,
+        "Easy": 2,
         "Medium": 0,
         "Hard": 0
       },
@@ -44,7 +44,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:33:30.172Z"
+      "lastUpdated": "2025-08-30T15:35:01.289Z"
     },
     {
       "id": "gfg-easy-first-repeating-element",
@@ -60,7 +60,23 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:33:30.175Z"
+      "lastUpdated": "2025-08-30T15:35:01.292Z"
+    },
+    {
+      "id": "gfg-easy-reverse-an-array",
+      "platform": "Gfg",
+      "difficulty": "Easy",
+      "problemName": "Reverse an Array",
+      "language": "java",
+      "files": {
+        "code": "class Solution {\n    public void reverseArray(int arr[]) {\n        // code here\n        int n = arr.length;\n        int temp[] = new int[n];\n        for(int i = 0; i < n; i++)\n        {\n            temp[i] = arr[n-i-1];\n        }\n        \n        for(int i =0; i< n; i++)\n        {\n            arr[i] = temp[i];\n        }\n    }\n}",
+        "readme": "Arrays,Data_Structures\n\nReverse an Array\nDifficulty: EasyAccuracy: 55.32%Submissions: 224K+Points: 2Average Time: 5m\n\nYou are given an array of integers arr[]. You have to reverse the given array.\n\nNote: Modify the array in place.\n\nExamples:\n\n\nInput: arr = [1, 4, 3, 2, 6, 5]\nOutput: [5, 6, 2, 3, 4, 1]\nExplanation: The elements of the array are [1, 4, 3, 2, 6, 5]. After reversing the array, the first element goes to the last position, the second element goes to the second last position and so on. Hence, the answer is [5, 6, 2, 3, 4, 1].\nInput: arr = [4, 5, 2]\nOutput: [2, 5, 4]\nExplanation: The elements of the array are [4, 5, 2]. The reversed array will be [2, 5, 4].\n\nInput: arr = [1]\nOutput: [1]\nExplanation: The array has only single element, hence the reversed array is same as the original.\n\nConstraints:\n1 ≤ arr.size() ≤ 105\n0 ≤ arr[i] ≤ 105\n\nTry more examples\nExpected Complexities\nCompany Tags\nBloombergFacebookTCSAdobeGoogleInfosysCapgeminiMorgan StanleyAmazonMicrosoftAppleYahooPayPalUber\nTopic Tags\nRelated Articles\nReport An Issue\nIf you are facing any issue on this page. Please let us know.",
+        "notes": "Reverse an Array\n\n          - Summary: The code uses two integer arrays. First, it creates a temporary array of the same size as the input array. It then iterates through the input array, copying elements in reverse order into the temporary array. Finally, it copies the elements from the temporary array back into the original array, effectively reversing it in place.\n\n          - Time Complexity: O(n) because the code iterates through the input array twice, once to copy elements to the temporary array and once to copy them back to the original array.  The number of operations is directly proportional to the size of the array.\n          - Space Complexity: O(n) because the code uses a temporary array of the same size as the input array to store the reversed elements. The space used is directly proportional to the size of the input array."
+      },
+      "hasCode": true,
+      "hasReadme": true,
+      "hasNotes": true,
+      "lastUpdated": "2025-08-30T15:35:01.293Z"
     },
     {
       "id": "hackerrank-medium-simple-array-sum",
@@ -76,7 +92,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:33:30.182Z"
+      "lastUpdated": "2025-08-30T15:35:01.300Z"
     },
     {
       "id": "leetcode-easy-palindrome-number",
@@ -92,7 +108,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:33:30.178Z"
+      "lastUpdated": "2025-08-30T15:35:01.296Z"
     },
     {
       "id": "leetcode-medium-longest-substring-without-repeating-characters",
@@ -108,7 +124,7 @@
       "hasCode": true,
       "hasReadme": true,
       "hasNotes": true,
-      "lastUpdated": "2025-08-30T15:33:30.180Z"
+      "lastUpdated": "2025-08-30T15:35:01.298Z"
     }
   ]
 }
